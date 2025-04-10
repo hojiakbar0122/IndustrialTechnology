@@ -4,7 +4,7 @@ const isClient = require("../middleware/guards/isClient.guard");
 const verifyToken = require("../middleware/guards/verifyToken.guard")
 const router = require("express").Router()
 
-router.post("/", verifyToken, isAdmin, addNewClient)
+router.post("/", addNewClient)
 router.post("/login", loginClient);
 router.post("/logout", verifyToken, isClient, logoutClient);
 router.post("/refreshtoken", refreshTokenClient);

@@ -17,7 +17,7 @@ const router = require("express").Router();
 
 router.post("/", verifyToken, isSuperAdmin, addNewAdmin);
 router.post("/login", loginAdmin);
-router.post("/logout", verifyToken, isAdmin, logoutAdmin);
+router.post("/logout", logoutAdmin);
 router.post("/refreshtoken", refreshTokenAdmin);
 router.post("/resetpassword/:id", verifyToken, isAdmin, resetPasswordById);
 

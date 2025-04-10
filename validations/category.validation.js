@@ -1,3 +1,5 @@
+const Joi = require("joi");
+
 exports.categoryValidation = (body) => {
     const schema = Joi.object({
       name: Joi.string().min(2).max(50),
