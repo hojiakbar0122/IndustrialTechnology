@@ -1,6 +1,5 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("../config/db");
-const Client = require("./client.model");
 const Owner = require("./owner.model");
 const Tech = require("./tech.model");
 const Status = require("./status.model");

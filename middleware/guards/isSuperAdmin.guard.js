@@ -1,5 +1,3 @@
-const { errorHandler } = require("../../helpers/error_handler");
-
 module.exports = async function (req, res, next) {
   try {
 
@@ -9,6 +7,6 @@ module.exports = async function (req, res, next) {
 
     next();
   } catch (error) {
-    errorHandler(error, res);
+    res.status(401).send({ message: "Token not valid" });
   }
 };

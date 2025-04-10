@@ -5,7 +5,6 @@ const config = require("config");
 const uuid = require("uuid");
 const jwtService = require("../services/jwt.service");
 const mailService = require("../services/mail.service");
-const Tech = require("../models/tech.model");
 const { ownerValidation } = require("../validations/owner.validation");
 const {
   passwordValidation,

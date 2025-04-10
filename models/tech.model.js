@@ -1,11 +1,9 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("../config/db");
-const Owner = require("./owner.model");
 const Location = require("./location.model");
 const Category = require("./category.model");
 const Review = require("./review.model");
 const Attachment = require("./attachment.model");
-const Contract = require("./contract.model");
 
 const Tech = sequelize.define("tech", {
   name: DataTypes.STRING,

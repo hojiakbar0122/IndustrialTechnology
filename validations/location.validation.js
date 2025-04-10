@@ -1,3 +1,5 @@
+const Joi = require("joi");
+
 exports.locationValidation = (body) => {
     const schema = Joi.object({
       address: Joi.string(),

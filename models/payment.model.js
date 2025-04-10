@@ -1,6 +1,5 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("../config/db");
-const Contract = require("./contract.model");
 
 const Payment = sequelize.define("payment", {
   amount: DataTypes.DECIMAL,

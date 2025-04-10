@@ -1,12 +1,11 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("../config/db");
-const Contract = require("./contract.model");
 const Tech = require("./tech.model");
 
 const Owner = sequelize.define("owner", {
   company_name: DataTypes.STRING,
-  email: DataTypes.STRING,
-  phone: DataTypes.STRING,
+  email: { type: DataTypes.STRING, unique: true },
+  phone: { type: DataTypes.STRING, unique: true },
   password: DataTypes.STRING,
   address: DataTypes.STRING,
   role: {
@@ -14,7 +13,7 @@ const Owner = sequelize.define("owner", {
     defaultValue: "owner",
     allowNull: false
   },  
-  registered_at: DataTypes.DATE,
+  registered_at: { type: DataTypes.DATE, defaultValue: DataTypes.NOW },
   refresh_token: DataTypes.STRING,
   is_active: { type: DataTypes.BOOLEAN},
   activation_link:{type:DataTypes.STRING}

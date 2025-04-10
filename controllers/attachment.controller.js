@@ -39,7 +39,7 @@ const getAllAttachments = async (req, res) => {
 const getAttachmentById = async (req, res) => {
   try {
     const { id } = req.params;
-    const attachment = await Attachment.findByPk();
+    const attachment = await Attachment.findByPk(id);
     res.status(200).send({ attachment });
   } catch (error) {
     errorHandler(error, res);

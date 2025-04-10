@@ -10,7 +10,6 @@ exports.adminValidation = (body) => {
     role: Joi.string().valid("admin", "superadmin"),
     is_active: Joi.boolean().default(false),
     activation_link: Joi.string().optional(),
-    is_creater:Joi.boolean().default(false)
   });
 
   return schema.validate(body, { abortEarly: false });
